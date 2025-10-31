@@ -1,13 +1,11 @@
 return {
-  -- Ajout du thème OneDarkPro
+  -- Thème OneDarkPro
   {
     "olimorris/onedarkpro.nvim",
-    priority = 1000, -- s'assurer qu'il se charge avant LazyVim
+    priority = 1000, -- se charge avant LazyVim
     opts = {
-      options = {
-        transparency = false,
-        cursorline = true,
-      },
+      transparency = true,
+      cursorline = true,
       styles = {
         comments = "italic",
         keywords = "bold",
@@ -15,20 +13,14 @@ return {
         strings = "NONE",
         variables = "NONE",
       },
-      -- Thèmes disponibles : "onedark", "onelight", "onedark_vivid", "onedark_dark"
-      colorscheme = "onedark_vivid",
     },
     config = function(_, opts)
       require("onedarkpro").setup(opts)
+      vim.cmd("colorscheme onedark_vivid") -- applique le thème
     end,
   },
+
+  -- Autres thèmes installés mais non utilisés par défaut
   { "ellisonleao/gruvbox.nvim" },
   { "catppuccin/nvim", name = "catppuccin" },
-  -- Configure LazyVim to load gruvbox
-  {
-    "LazyVim/LazyVim",
-    opts = {
-      colorscheme = "onedark",
-    },
-  },
 }
