@@ -23,4 +23,7 @@ return {
   -- Autres thèmes installés mais non utilisés par défaut
   { "ellisonleao/gruvbox.nvim" },
   { "catppuccin/nvim", name = "catppuccin" },
+  {
+    "Mofiqul/vscode.nvim",
+  },
 }
