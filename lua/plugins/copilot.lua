@@ -19,14 +19,6 @@ return {
           dismiss = "<C-\\>",
         },
       },
-      panel = { enabled = false }, -- pas de panneau
-
-      -- IMPORTANT : autoriser l’attache quand TU l’actives
-      filetypes = {
-
-        -- tout le reste autorisé (cpp inclus) *si* tu fais :Copilot enable
-        ["*"] = true,
-      },
     },
 
     keys = {
