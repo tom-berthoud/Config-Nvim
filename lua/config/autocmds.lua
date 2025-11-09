@@ -18,6 +18,11 @@ return {
       "hrsh7th/cmp-nvim-lsp",
       "saadparwaiz1/cmp_luasnip",
     },
+    opts = function(_, opts)
+      local cmp = require("cmp")
+      opts.mapping = opts.mapping or {}
+      opts.mapping["<CR>"] = cmp.mapping.confirm({ select = true })
+    end,
   },
 
   -- Snippets LaTeX (optionnel mais pratique)
